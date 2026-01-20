@@ -1,3 +1,5 @@
+// This programme is to learn about the getline feature in C++
+
 #include <iostream>
 using namespace std;
 
