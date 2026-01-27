@@ -1,4 +1,4 @@
-// Cashier need to add two amounts entered by a customer quickly. Implimentation of a solution which accepts two numbers and computes their some is given below
+// Q1 Cashier need to add two amounts entered by a customer quickly. Implimentation of a solution which accepts two numbers and computes their some is given below
 #include <iostream>
 using namespace std;
 

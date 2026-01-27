@@ -1,4 +1,4 @@
-// Calculation of average of three numbers for implementation in C++ for teacher to calculate the average marks of three students.
+// Q2 Calculation of average of three numbers for implementation in C++ for teacher to calculate the average marks of three students.
 
 #include <iostream>
 using namespace std;
