@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-    int bonus = 12;
+    float bonus = 12;
     int no_emp;
     cout << "Enter the number of employees :: ";
     cin >> no_emp;
@@ -18,6 +18,9 @@ int main()
         cin >> employes[i];
         total_salary = total_salary + employes[i];
     }
-    cout << "Total salary without " << no_emp << " employes without is " << total_salary;
+    cout << "\nTotal no of employes :: " << no_emp << endl;
+    cout << "Total salary without bonus :: " << total_salary << endl;
+    cout << "Bonus :: " << bonus << endl;
+    cout << "Salary after bonus :: " << total_salary * bonus / 100 << endl;
     return 0;
 }
