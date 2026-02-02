@@ -1,5 +1,7 @@
 // This programme is to learn about the getline feature in C++
 
+// NOTE IMPORTANT :: cin.ignore(); dont use if you havent usen cin befor ignore statement else it will eat the first char like you use ignore func and you havent taken any input before that in that case
+
 #include <iostream>
 using namespace std;
 
