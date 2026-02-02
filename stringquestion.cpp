@@ -16,12 +16,10 @@ int main()
         char user_char = user_string[i];
         if (user_char == ' ')
         {
-            cout << user_char << endl;
             continue;
         }
         else if (user_char == 'a' || user_char == 'e' || user_char == 'i' || user_char == 'o' || user_char == 'u' || user_char == 'A' || user_char == 'E' || user_char == 'I' || user_char == 'O' || user_char == 'U')
         {
-            cout << user_char << endl;
             vowel++;
         }
         else if (user_char >= 'a' && user_char <= 'z' || user_char >= 'A' && user_char <= 'Z')
