@@ -12,3 +12,4 @@ This repository contains the practical experiments and source code for the **Fun
 
 _ Doubt questions_
 1. 13
+2. 25
