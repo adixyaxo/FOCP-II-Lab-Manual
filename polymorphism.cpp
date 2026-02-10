@@ -1,13 +1,15 @@
 #include <iostream>
 using namespace std;
 
+// polymorphism means ki tum ek hi function ke same name se diffrent func bana sakte ho if there are diffrent data types
+
 int sum(int a, int b) // backward Decleraion
 {
     cout << "int  ";
     return a + b;
 }
 
-double sum(double a, double b); // forward Decleration
+double sum(double, double); // forward Decleration
 
 float sum(float a, float b)
 {
@@ -31,3 +33,10 @@ double sum(double a, double b)
 }
 
 // if you get an ambiguity error check your function type
+
+// for simmilar functions first the programme looks in the following order of simmilarity towards giving same name of function error
+/*
+1. Name of the function
+2. No of parameters
+3. Data type of the function
+*/
