@@ -38,5 +38,5 @@ double sum(double a, double b)
 /*
 1. Name of the function
 2. No of parameters
-3. Data type of the function
+3. Data type of the function and sequence of the datatypes
 */
