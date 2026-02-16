@@ -3,20 +3,28 @@ using namespace std;
 class Car
 {
     /* By default all the variables of the class are considers as private variables by default which cannot be accessed in the programme or the main function */
-    int make_year = 1000;
-    string color = "blue";
+    int make_year;
+    string color;
 
-public: // for enabling access to be able to change the variable value outside of the main function to allow access
-    string car_type = "sedan";
-
+public: // for enabling access to be able to change the variable value outside of the main function to allow access and to access the function and data outside in public
     /* By default all the functions of the class are considers as private functions by default which cannot be accessed in the programme or the main function */
 
-public: // for people to be able to access the function and data outside in public
+    string car_type;
+
     void display()
     {
         cout << make_year << endl;
         cout << color << endl;
         cout << car_type << endl;
+    }
+    void car_entry()
+    {
+        cout << "Enter the build year of the car  ::  ";
+        cin >> make_year;
+        cout << "Enter the color of the car  ::  ";
+        cin >> color;
+        cout << "Enter the type of the car  ::  ";
+        cin >> car_type;
     }
 };
 
@@ -24,6 +32,7 @@ int main()
 {
 
     Car c1;
+    c1.car_entry();
     c1.display();
 
     // c1.make_year = 2000;
@@ -36,7 +45,9 @@ int main()
         int make_year = 1000;
                         ^~~~*/
 
+    cout << endl;
     c1.car_type = "hatchback";
+    c1.display();
 
     return 0;
 }
