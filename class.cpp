@@ -6,7 +6,7 @@ class Car
     int make_year;
     string color;
 
-public: // This is an acess specifier
+public: // This is an access specifier below this everything would be public
     // for enabling access to be able to change the variable value outside of the main function to allow access and to access the function and data outside in public
     /* By default all the functions of the class are considers as private functions by default which cannot be accessed in the programme or the main function */
 
@@ -27,6 +27,9 @@ public: // This is an acess specifier
         cout << "Enter the type of the car  ::  ";
         cin >> car_type;
     }
+
+private: // below this everything would turn private again
+    int private_var;
 };
 
 int main()
@@ -50,5 +53,10 @@ int main()
     c1.car_type = "hatchback";
     c1.display();
 
+    // private_var = 100;
+    /* class.cpp: In function 'int main()':
+    class.cpp:56:5: error: 'private_var' was not declared in this scope
+         private_var = 100;
+         ^~~~~~~~~~~*/
     return 0;
 }
