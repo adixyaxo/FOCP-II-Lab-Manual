@@ -6,7 +6,8 @@ class Car
     int make_year;
     string color;
 
-public: // for enabling access to be able to change the variable value outside of the main function to allow access and to access the function and data outside in public
+public: // This is an acess specifier
+    // for enabling access to be able to change the variable value outside of the main function to allow access and to access the function and data outside in public
     /* By default all the functions of the class are considers as private functions by default which cannot be accessed in the programme or the main function */
 
     string car_type;
