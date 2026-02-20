@@ -7,6 +7,7 @@ int main()
     int *pointer = &a;
     int &refrence = a;
     int &refrenceofrefrence = refrence;
+    int &refrenceofrefrenceofrefrence = refrenceofrefrence;
     int &refrenceofpointer = *pointer;
     int *pointerofpointer = &*pointer;
 
@@ -24,5 +25,10 @@ int main()
     cout << "&refrenceofrefrence  ::  " << &refrenceofrefrence << endl;
     cout << "refrenceofpointer  ::  " << refrenceofpointer << endl;
     cout << "&refrenceofpointer  ::  " << &refrenceofpointer << endl;
+    cout << "refrenceofrefrenceofrefrence  ::  " << refrenceofrefrenceofrefrence << endl;
+    cout << "&refrenceofrefrenceofrefrence  ::  " << &refrenceofrefrenceofrefrence << endl;
+
+    // No matter how many layers of refrence we create the same value will always be stored in same address and all the refrences would act like a shortcut to the original variable and all the refrences will have same address as the original variable and all the refrences will have same value as the original variable
+
     return 0;
 }
