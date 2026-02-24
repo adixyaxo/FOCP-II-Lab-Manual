@@ -1,0 +1,1 @@
+learn static variable and oops in c++
