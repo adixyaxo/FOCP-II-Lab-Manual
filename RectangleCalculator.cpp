@@ -41,6 +41,11 @@ RectangleCalculator::RectangleCalculator(int l, int w)
 
 int main()
 {
-
+    RectangleCalculator rect(5, 3);
+    rect.displayResults();
+    rect.inputDimensions();
+    rect.calculatePerimeter();
+    rect.calculateArea();
+    rect.displayResults();
     return 0;
 }
