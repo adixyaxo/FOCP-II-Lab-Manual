@@ -84,45 +84,43 @@ public:
   * He acts as a **Customer** at a shop.
   * He is the same person but behaves differently in different situations.`
 
-
-
 ## 5. Constructors and Destructors
 
-  ### A. Constructors
+### A. Constructors
 
+* **Definition**: A special member function that is automatically called the moment an object is created. It is primarily used to initialize the object's data members.
+* **Key Rules**:
+  * It must have the exact same name as the class.
+  * It does not have a return type (not even `void`).
+  * _There can be more than two constructors given that they have diffrent parameters and diffrent types and this is called_ **constructor overloading**
+* **Types**:
+  * **Default Constructor**: Takes no arguments.
+  * **Parameterized Constructor**: Takes arguments to set initial values.
+  * **Copy Constructor**: Initializes an object using another object of the same class.
+* *Real-life Example*: **Moving into a new house**. When you first move in (creating the object), you immediately set up your furniture, paint the walls, and turn on the electricity. The constructor does this initial "setup" for your object.
 
-  * **Definition**: A special member function that is automatically called the moment an object is created. It is primarily used to initialize the object's data members.
-  * **Key Rules**:
-    * It must have the exact same name as the class.
-    * It does not have a return type (not even `void`).
-  * **Types**:
-    * **Default Constructor**: Takes no arguments.
-    * **Parameterized Constructor**: Takes arguments to set initial values.
-    * **Copy Constructor**: Initializes an object using another object of the same class.
-  * *Real-life Example*: **Moving into a new house**. When you first move in (creating the object), you immediately set up your furniture, paint the walls, and turn on the electricity. The constructor does this initial "setup" for your object.
+### B. Destructors
 
-  ### B. Destructors
+* **Definition**: A special member function that is automatically called when an object is destroyed (e.g., when the program ends or the object goes out of scope). It is used to free up resources, like closing files or releasing memory.
+* **Key Rules**:
+  * It must have the exact same name as the class, preceded by a tilde (`~`).
+  * It takes no arguments and has no return type.
+  * There can only be one destructor per class.
+* *Real-life Example*: **Moving out of a house**. Before you hand over the keys and leave forever (object destruction), you pack up your belongings, clean the floors, and turn off the water. The destructor is the "cleanup" crew.
 
-  * **Definition**: A special member function that is automatically called when an object is destroyed (e.g., when the program ends or the object goes out of scope). It is used to free up resources, like closing files or releasing memory.
-  * **Key Rules**:
-    * It must have the exact same name as the class, preceded by a tilde (`~`).
-    * It takes no arguments and has no return type.
-    * There can only be one destructor per class.
-  * *Real-life Example*: **Moving out of a house**. Before you hand over the keys and leave forever (object destruction), you pack up your belongings, clean the floors, and turn off the water. The destructor is the "cleanup" crew.
+**C++**
 
-  **C++**
+```
+class Car {
+public:
+    // Constructor
+    Car() {
+        cout << "Car is created! Engine initialized.\n";
+    }
 
-  ```
-  class Car {
-  public:
-      // Constructor
-      Car() {
-          cout << "Car is created! Engine initialized.\n";
-      }
-
-      // Destructor
-      ~Car() {
-          cout << "Car is destroyed! Resources cleaned up.\n";
-      }
-  };
-  ```
+    // Destructor
+    ~Car() {
+        cout << "Car is destroyed! Resources cleaned up.\n";
+    }
+};
+```

@@ -25,6 +25,8 @@ student::student(string n, int m, string s)
     name = n;
     marks = m;
     section = s;
+
+    // here we are talking the values and assigning them to the data members of the class using the parameterized constructor. When we create an object of the class and pass the values for name, marks, and section, the constructor will be called and it will initialize the data members with those values. This allows us to create objects with specific values for their attributes right at the time of creation, which can be very useful in many situations.
 };
 
 student::~student()
