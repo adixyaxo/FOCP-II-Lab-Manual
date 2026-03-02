@@ -20,11 +20,12 @@ student::student()
     cout << "This is use of a constructor" << endl;
 }; // this is a simple constructor which is a special member function that is automatically called when an object of the class is created. It has the same name as the class and does not have a return type. The primary purpose of a constructor is to initialize the data members of the class. In this case, the constructor does not take any arguments and does not perform any initialization, but it can be used to set default values for the data members or to perform any other setup tasks that are necessary when an object is created.
 
-student::student(string n, int m, string s)
+student::student(string name, int marks, string s)
 {
-    name = n;
-    marks = m;
-    section = s;
+    this->name = name;
+    this->marks = marks;
+    this->section = s;
+    // Here this-> is used to refer to the current object of the class. It is a pointer that points to the object that is currently being created or accessed. In this case, we are using this-> to differentiate between the data members of the class (name, marks, and section) and the parameters of the constructor (name, marks, and s). By using this->, we can assign the values of the parameters to the corresponding data members of the class.
 
     // here we are talking the values and assigning them to the data members of the class using the parameterized constructor. When we create an object of the class and pass the values for name, marks, and section, the constructor will be called and it will initialize the data members with those values. This allows us to create objects with specific values for their attributes right at the time of creation, which can be very useful in many situations.
 };
