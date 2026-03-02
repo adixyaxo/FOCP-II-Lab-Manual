@@ -4,36 +4,36 @@ Object-Oriented Programming (OOP) is a programming style based on the concept of
 
 ## 1. Fundamentals: Class and Object
 
-*   **Class**: A **blueprint** or template. It defines properties and behaviors but doesn't occupy memory for data until an object is created.
-    *   *Real-life Example*: An **Architect's Blueprint** for a house. It shows where walls and windows go, but you can't live in the blueprint.
-*   **Object**: An **instance** of a class. It is the actual entity created from the blueprint.
-    *   *Real-life Example*: The **Actual House** built from the blueprint. You can build multiple houses (objects) from one blueprint (class).
+* **Class**: A **blueprint** or template. It defines properties and behaviors but doesn't occupy memory for data until an object is created.
+  * *Real-life Example*: An **Architect's Blueprint** for a house. It shows where walls and windows go, but you can't live in the blueprint.
+* **Object**: An **instance** of a class. It is the actual entity created from the blueprint.
+  * *Real-life Example*: The **Actual House** built from the blueprint. You can build multiple houses (objects) from one blueprint (class).
 
 ## 2. Access Modifiers (Specifiers)
 
 Access modifiers determine the visibility or accessibility of class members (variables and functions).
 
-1.  **Public**:
-    *   **Definition**: Accessible from anywhere (inside and outside the class).
-    *   *Real-life Example*: **Public Park**. Anyone can enter and use it.
-2.  **Private**:
-    *   **Definition**: Accessible only within the class itself. Not accessible from outside.
-    *   *Real-life Example*: **Your Personal Diary**. Only you can read or write in it; outsiders cannot access it directly.
-3.  **Protected**:
-    *   **Definition**: Accessible within the class and by derived classes (child classes), but not by the outside world.
-    *   *Real-life Example*: **Family Wealth**. It is accessible to parents and passed down to children, but not shared with strangers.
+1. **Public**:
+   * **Definition**: Accessible from anywhere (inside and outside the class).
+   * *Real-life Example*: **Public Park**. Anyone can enter and use it.
+2. **Private**:
+   * **Definition**: Accessible only within the class itself. Not accessible from outside.
+   * *Real-life Example*: **Your Personal Diary**. Only you can read or write in it; outsiders cannot access it directly.
+3. **Protected**:
+   * **Definition**: Accessible within the class and by derived classes (child classes), but not by the outside world.
+   * *Real-life Example*: **Family Wealth**. It is accessible to parents and passed down to children, but not shared with strangers.
 
 ## 3. Getters and Setters
 
 Since `private` variables cannot be accessed directly from outside the class, we use public functions called **Getters** and **Setters** to read and modify them safely. This ensures **Encapsulation**.
 
-*   **Getter**: A function to **read** (get) the value.
-*   **Setter**: A function to **update** (set) the value, usually with validation logic.
+* **Getter**: A function to **read** (get) the value.
+* **Setter**: A function to **update** (set) the value, usually with validation logic.
+* *Real-life Example*: **Bank Account Balance**.
 
-*   *Real-life Example*: **Bank Account Balance**.
-    *   You cannot directly edit the bank's database to change your balance (Private variable).
-    *   You deposit money via a teller/ATM (**Setter**) -> The bank checks if the cash is real, then updates the balance.
-    *   You check your balance via an app (**Getter**) -> The bank displays the amount.
+  * You cannot directly edit the bank's database to change your balance (Private variable).
+  * You deposit money via a teller/ATM (**Setter**) -> The bank checks if the cash is real, then updates the balance.
+  * You check your balance via an app (**Getter**) -> The bank displays the amount.
 
 ```cpp
 class Student {
@@ -60,21 +60,69 @@ public:
 ## 4. The Four Pillars of OOP
 
 ### A. Encapsulation
-*   **Concept**: Wrapping up data (variables) and methods (functions) together into a single unit (Class) and restricting direct access to data.
-*   *Real-life Example*: **A Capsule**. The medicine is hidden inside the capsule shell. You consume the capsule, but you don't touch the chemical powder directly.
+
+* **Concept**: Wrapping up data (variables) and methods (functions) together into a single unit (Class) and restricting direct access to data.
+* *Real-life Example*: **A Capsule**. The medicine is hidden inside the capsule shell. You consume the capsule, but you don't touch the chemical powder directly.
 
 ### B. Abstraction
-*   **Concept**: Hiding complex implementation details and showing only the necessary features to the user.
-*   *Real-life Example*: **Driving a Car**. You use the steering wheel, accelerator, and brakes to drive. You don't need to know how the engine combustion works or how the transmission gears shift internally.
+
+* **Concept**: Hiding complex implementation details and showing only the necessary features to the user.
+* *Real-life Example*: **Driving a Car**. You use the steering wheel, accelerator, and brakes to drive. You don't need to know how the engine combustion works or how the transmission gears shift internally.
 
 ### C. Inheritance
-*   **Concept**: A mechanism where a new class (Child/Derived) acquires the properties and behaviors of an existing class (Parent/Base). It promotes code reusability.
-*   *Real-life Example*: **Genetics**. A child inherits physical traits (like eye color, height) from their parents but also has their own unique traits.
+
+* **Concept**: A mechanism where a new class (Child/Derived) acquires the properties and behaviors of an existing class (Parent/Base). It promotes code reusability.
+* *Real-life Example*: **Genetics**. A child inherits physical traits (like eye color, height) from their parents but also has their own unique traits.
 
 ### D. Polymorphism
-*   **Concept**: "Poly" means many, "Morph" means forms. It allows objects or methods to behave differently based on the context.
-*   *Real-life Example*: **A Person**.
-    *   A man acts as an **Employee** in the office.
-    *   He acts as a **Father** at home.
-    *   He acts as a **Customer** at a shop.
-    *   He is the same person but behaves differently in different situations.
+
+* **Concept**: "Poly" means many, "Morph" means forms. It allows objects or methods to behave differently based on the context.
+* *Real-life Example*: **A Person**.
+
+  * A man acts as an **Employee** in the office.
+  * He acts as a **Father** at home.
+  * He acts as a **Customer** at a shop.
+  * He is the same person but behaves differently in different situations.`
+
+
+
+## 5. Constructors and Destructors
+
+  ### A. Constructors
+
+
+  * **Definition**: A special member function that is automatically called the moment an object is created. It is primarily used to initialize the object's data members.
+  * **Key Rules**:
+    * It must have the exact same name as the class.
+    * It does not have a return type (not even `void`).
+  * **Types**:
+    * **Default Constructor**: Takes no arguments.
+    * **Parameterized Constructor**: Takes arguments to set initial values.
+    * **Copy Constructor**: Initializes an object using another object of the same class.
+  * *Real-life Example*: **Moving into a new house**. When you first move in (creating the object), you immediately set up your furniture, paint the walls, and turn on the electricity. The constructor does this initial "setup" for your object.
+
+  ### B. Destructors
+
+  * **Definition**: A special member function that is automatically called when an object is destroyed (e.g., when the program ends or the object goes out of scope). It is used to free up resources, like closing files or releasing memory.
+  * **Key Rules**:
+    * It must have the exact same name as the class, preceded by a tilde (`~`).
+    * It takes no arguments and has no return type.
+    * There can only be one destructor per class.
+  * *Real-life Example*: **Moving out of a house**. Before you hand over the keys and leave forever (object destruction), you pack up your belongings, clean the floors, and turn off the water. The destructor is the "cleanup" crew.
+
+  **C++**
+
+  ```
+  class Car {
+  public:
+      // Constructor
+      Car() {
+          cout << "Car is created! Engine initialized.\n";
+      }
+
+      // Destructor
+      ~Car() {
+          cout << "Car is destroyed! Resources cleaned up.\n";
+      }
+  };
+  ```
