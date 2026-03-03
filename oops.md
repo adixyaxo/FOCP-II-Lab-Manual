@@ -124,3 +124,71 @@ public:
     }
 };
 ```
+
+## 6. Copy Constructor
+
+### Definition
+
+A **Copy Constructor** is a special member function that creates a new object as a copy of an existing object of the same class. It is automatically called when an object is initialized using another object.
+
+### Syntax
+
+```cpp
+class ClassName {
+public:
+  ClassName(const ClassName &obj) {
+    // Copy logic here
+  }
+};
+```
+
+### When is Copy Constructor Called?
+
+* When an object is initialized with another object: `Student s2 = s1;`
+* When an object is passed by value to a function.
+* When an object is returned by value from a function.
+
+### Types of Copy Constructor
+
+#### A. Shallow Copy
+
+* **Definition**: Copies only the values of member variables from one object to another. If a member is a pointer, only the address is copied, not the data it points to.
+* **Problem**: Both objects end up pointing to the same memory location. When one object is destroyed, it frees the memory, leaving the other with a dangling pointer.
+* *Real-life Example*: **Photocopying a check**. The copy and original both reference the same bank account. If someone cashes the original check, the account is debited once, but the copy becomes invalid or problematic.
+
+```cpp
+class Person {
+public:
+  char* name;
+  
+  // Default shallow copy (compiler-generated)
+  Person(const Person &obj) {
+    name = obj.name; // Only address copied, not the string
+  }
+};
+```
+
+#### B. Deep Copy
+
+* **Definition**: Copies not just the pointer addresses but also allocates new memory and copies the actual data that the pointers point to.
+* **Advantage**: Each object has its own independent copy of the data. Destroying one object doesn't affect the other.
+* *Real-life Example*: **Scanning and printing a document**. The printout is an independent copy. Changes to the original don't affect the printed version.
+
+```cpp
+class Person {
+public:
+  char* name;
+  
+  // Deep copy constructor
+  Person(const Person &obj) {
+    name = new char[strlen(obj.name) + 1];
+    strcpy(name, obj.name); // Actual data copied
+  }
+  
+  // Destructor
+  ~Person() {
+    delete[] name;
+  }
+};
+```
+
