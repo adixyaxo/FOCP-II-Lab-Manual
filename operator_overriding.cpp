@@ -18,3 +18,52 @@
 
 // Compile-time is about Overloading (same name, different parameters) and is resolved by the compiler.
 // Run-time is about Overriding (same name, same parameters, different class implementations) and is resolved dynamically while the program runs, relying on inheritance and virtual functions.
+
+#include <iostream>
+using namespace std;
+
+class Cmplx
+{
+private:
+    int real;
+    int img;
+
+public:
+    int get_real() { return real; }
+    int get_img() { return img; }
+    int set_real(int real) { this->real = real; }
+    int set_img(int img) { this->img = img; }
+    Cmplx()
+    {
+        real = 0;
+        img = 0;
+    };
+    Cmplx(int real, int img)
+    {
+        this->real = real;
+        this->img = img;
+    }
+    ~Cmplx() {};
+
+    void display()
+    {
+        cout << real << " + " << img << "i" << endl;
+    }
+
+    Cmplx operator+(Cmplx c)
+    {
+        Cmplx result;
+        result.real = real + c.real;
+        result.img = img + c.img;
+        return result;
+    }
+};
+
+int main()
+{
+    Cmplx c1(10, 11);
+    Cmplx c2(20, 21);
+    Cmplx c3 = c1 + c2;
+    c3.display();
+    return 0;
+}
