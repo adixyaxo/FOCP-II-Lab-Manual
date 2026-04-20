@@ -37,7 +37,7 @@ int main()
         cout << word << " ";
         count++;
     }
-    cout << "\nNo of words are  ::  " << count_line << endl;
+    cout << "\nNo of words are  ::  " << count << endl;
 
     fin2.close();
 
