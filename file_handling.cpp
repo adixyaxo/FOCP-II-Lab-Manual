@@ -15,6 +15,10 @@ int main()
 
     ifstream fin("./aditya.txt"); // fin is the file name
 
+    if (!fin.is_open())
+    {
+        cout << "File issue not opening" << endl;
+    }
     string line;
     int count_line = 0;
 
