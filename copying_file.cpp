@@ -5,13 +5,13 @@ using namespace std;
 int main()
 {
     ifstream fin("./data.txt");
+    fstream fout("copydata.txt", ios::app);
     string line;
     while (getline(fin, line))
     {
-        fstream fout("copydata.txt", ios::app);
         fout << line << endl;
-        fout.close();
     }
+    fout.close();
     fin.close();
 
     return 0;
