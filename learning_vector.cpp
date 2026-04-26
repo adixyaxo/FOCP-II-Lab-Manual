@@ -23,7 +23,14 @@ int main()
         vec1.push_back(element);
     }
     display(vec1);
-    vec1.pop_back(); // removes the element at the end of the vector
+    vec1.pop_back(); // removes the element at the end of the vector ie 4
+
+    // interator
+    vector<int>::iterator iter = vec1.begin();
+
+    vec1.insert(iter, 50, 566);
+
+    // vec1.insert(iter + 1 + vec1.size(), 100);
     display(vec1);
     return 0;
 }
