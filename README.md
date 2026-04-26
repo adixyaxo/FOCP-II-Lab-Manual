@@ -10,6 +10,7 @@ This repository contains the practical experiments and source code for the **Fun
 * **Section:** A1
 * **Year/Semester:** 1st Year, 2nd Semester
 
-_Doubt questions_
-1. 13
-2. 25
+_FOR ANY DOUBT REFFER TO THESE RESOURSES_
+
+1. https://cplusplus.com/
+2.
