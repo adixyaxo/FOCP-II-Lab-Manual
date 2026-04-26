@@ -2,7 +2,8 @@
 #include <vector>
 using namespace std;
 
-void display(vector<int> &v)
+template <class T>
+void display(vector<T> &v)
 {
     for (int i = 0; i < v.size(); i++)
     {
@@ -13,8 +14,11 @@ void display(vector<int> &v)
 
 int main()
 {
+    // ways to create a vector
+    vector<int> vec1;        // zero length vector
+    vector<char> vec2(4);    // 4 element character vector
+    vector<char> vec3(vec2); // 4 element character vector derived out of vec 2
 
-    vector<int> vec1;
     int element;
     for (int i = 0; i < 4; i++)
     {

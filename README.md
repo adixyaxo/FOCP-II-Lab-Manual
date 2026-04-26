@@ -13,4 +13,4 @@ This repository contains the practical experiments and source code for the **Fun
 _FOR ANY DOUBT REFFER TO THESE RESOURSES_
 
 1. https://cplusplus.com/
-2.
+2. https://archive.codewithharry.com/blogpost/cpp-cheatsheet/
