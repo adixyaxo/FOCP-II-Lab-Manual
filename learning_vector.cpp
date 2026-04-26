@@ -32,5 +32,6 @@ int main()
 
     // vec1.insert(iter + 1 + vec1.size(), 100);
     display(vec1);
+    cout << vec1.at(vec1.size() - 1);
     return 0;
 }
