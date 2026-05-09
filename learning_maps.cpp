@@ -20,7 +20,7 @@ int main() {
   for (itr = student.begin(); itr != student.end(); itr++)
   {
     cout<<(*itr).first<< " :: "<< (*itr).second << endl;
-    /* code */
+    // this would print all the keys coupled with the values from the beginning till the end
   }
 
   cout<<student["Harry"];
