@@ -37,5 +37,10 @@ int main() {
   // pointer_address_not_changable = ptr; cant happen
 
   cout << *pointer_value_changable << " :: " <<pointer_value_changable << " :: " <<&pointer_value_changable<<endl;
+
+  // now lastly there is
+  const int* const pointer_nothing_changable = new int(2);
+  // nothing possibly can be changed in this case
+
   return 0;
 }
