@@ -18,9 +18,7 @@ int main()
 
 
     vector<int> vec1;// zero length vector
-
     vector<char> vec2(4); // 4 element character vector
-
 
     vec2.assign({'a', 'b', 'a', 'b'}); // assigning elemnts
 
