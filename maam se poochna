@@ -1,0 +1,117 @@
+maam se poochna
+
+20
+
+
+
+
+Question at position 20
+
+Predict the correct output.
+
+#include <iostream>
+
+class Test {
+    int x;
+public:
+    Test(int a) : x(a) {}
+
+    Test operator+(const Test& t) {
+        x += t.x;
+        return *this;
+    }
+
+    int get() const { return x; }
+};
+
+int main() {
+    Test t1(2), t2(3);
+    Test t3 = t1 + t2;
+    std::cout << t1.get() << " " << t3.get();
+}
+
+28
+
+Multiple Choice
+1 point
+
+
+
+Question at position 28
+
+Predict the correct output.
+
+#include <iostream>
+using namespace std;
+class Base{
+public:
+    void show(){
+        cout<<"Base";
+    }
+};
+class Derived : public Base{
+public:
+    virtual void show(){
+        cout<<"Derived";
+    }
+};
+int main(){
+    Base *ptr = new Derived();
+    ptr->show();
+}
+
+
+
+Question at position 31
+
+Predict the correct output.
+
+#include <iostream>
+using namespace std;
+class Base{
+public:
+    virtual void show(){
+        cout<<"Base";
+    }
+};
+class Derived : public Base{
+public:
+    void show(int x){
+        cout<<"Derived";
+    }
+};
+int main(){
+    Base *ptr = new Derived();
+    ptr->show();
+}
+
+39
+
+Multiple Choice
+1 point
+
+
+
+Question at position 39
+
+Predict the correct output.
+
+#include <iostream>
+using namespace std;
+class Base{
+public:
+    ~Base(){
+        cout<<"Base";
+    }
+};
+class Derived : public Base{
+public:
+    ~Derived(){
+        cout<<"Derived";
+    }
+};
+int main(){
+    Base *ptr = new Derived();
+    delete ptr;
+}
+

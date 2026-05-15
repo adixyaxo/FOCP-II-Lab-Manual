@@ -160,7 +160,7 @@ public:
 class Person {
 public:
   char* name;
-  
+
   // Default shallow copy (compiler-generated)
   Person(const Person &obj) {
     name = obj.name; // Only address copied, not the string
@@ -178,13 +178,13 @@ public:
 class Person {
 public:
   char* name;
-  
+
   // Deep copy constructor
   Person(const Person &obj) {
     name = new char[strlen(obj.name) + 1];
     strcpy(name, obj.name); // Actual data copied
   }
-  
+
   // Destructor
   ~Person() {
     delete[] name;
@@ -192,4 +192,11 @@ public:
 };
 ```
 
-_You **CANNOT** overload functions based only on return type_
+_You **CANNOT** overload functions based only on return type___
+
+
+**Ambiguity = compiler ko samajh nahi aata kaunsa member use kare**
+
+agar compiler ke pass do option hon aur usse pata na chale konsa call krna hai toh ambiguity error aayega
+
+Constructor and destructor virtual nahi hota and agar ptr bana kr aur inherit krke call kren kisi ka bhi destructor ya constructor toh hamesha base ka hi call hoga
