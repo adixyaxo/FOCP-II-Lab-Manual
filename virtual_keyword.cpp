@@ -63,8 +63,10 @@ int main() {
   d_ptr->Base::func1(); // hamesha base ka hi run krega chahe kuch ho jae
   d_ptr->Base::func2(10); // hamesha base ka hi run krega chahe kuch ho jae
   cout<<endl;
+
+
   Base* base_to_derived = new derived;
-  // derived* derived_to_base = b_ptr;ye possible hi nahi krna kyunki a value of type "Base *" cannot be used to initialize an entity of type "derived *
+  //derived* derived_to_base = b_ptr;ye possible hi nahi krna kyunki a value of type "Base *" cannot be used to initialize an entity of type "derived *
   cout<<endl;
   base_to_derived->func1();
 // base_to_derived ek Base type pointer hai toh agar virtual nahi use hora kahin bhi toh base ke hi functions call honge

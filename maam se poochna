@@ -18,7 +18,7 @@ public:
 
     Test operator+(const Test& t) {
         x += t.x;
-        return *this;
+        return *this; // here *this reffers to pointer of the current class ie Test and would return the modified final version of the current object being passed to this person so in short the object being passed to this operator would be updated
     }
 
     int get() const { return x; }
@@ -26,7 +26,7 @@ public:
 
 int main() {
     Test t1(2), t2(3);
-    Test t3 = t1 + t2;
+    Test t3 = t1 + t2; // here we are doing t1.operator+(&t2) were essenatially t2.x ie 3 would be added to the x of the t1 object so t1.x = 2 + t2.x ie 3 so t1.x is 5 then it will return the modifed value of this ie t2(5) so t3 = t2(5) this means t3.x also equals 5 and t1.x equals 5 as it was returned and updated by the function operator +
     std::cout << t1.get() << " " << t3.get();
 }
 
@@ -114,4 +114,32 @@ int main(){
     Base *ptr = new Derived();
     delete ptr;
 }
+
+
+
+tagda question 90
+int a = 10, b = 20;
+int c = a > b ? a++ : b++;
+cout << a << " " << b << " " << c;
+
+increment badme pahle assign on c
+
+
+
+94
+
+Multiple Choice
+1 point
+
+
+
+Question at position 94
+
+Predict the output:
+
+int i=0;
+for(; i<3; i++)
+    for(int j=0; j<2; )
+        if(i + j++ == 2) break;
+        else cout << i+j;
 

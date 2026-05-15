@@ -8,16 +8,13 @@ int main()
 
     try
     {
-        if (b == 0)
-        {
-            throw "Division by zero error !";
-        }
-        cout << "Result : " << a / b << endl;
+        /* code */
     }
-    catch (const char *msg)
+    catch(const char* e)
     {
-        cout << "Exception caught : " << msg << endl;
+        std::cerr << e.what() << '\n';
     }
+
     cout << "Programme continues ..." << endl;
     return 0;
 }

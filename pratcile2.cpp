@@ -2,17 +2,17 @@
 using namespace std;
 class Base{
 public:
-    virtual void show(){
-        cout<<"Base";
+    ~Base(){
+        cout<<"Base"<<endl;
     }
 };
 class Derived : public Base{
 public:
-    void show(int x){
+    ~Derived(){
         cout<<"Derived";
     }
 };
 int main(){
     Base *ptr = new Derived();
-    ptr->show(3);
+    delete ptr;
 }

@@ -194,9 +194,12 @@ public:
 
 _You **CANNOT** overload functions based only on return type___
 
-
 **Ambiguity = compiler ko samajh nahi aata kaunsa member use kare**
 
 agar compiler ke pass do option hon aur usse pata na chale konsa call krna hai toh ambiguity error aayega
 
 Constructor and destructor virtual nahi hota and agar ptr bana kr aur inherit krke call kren kisi ka bhi destructor ya constructor toh hamesha base ka hi call hoga
+
+by default in the array *arr means *arr[0] and *(arr + x) means arr[x]
+
+:: is used to call global agar :: ke peeche kuch na ho jaise   :: x
